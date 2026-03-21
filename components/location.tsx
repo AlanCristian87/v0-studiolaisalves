@@ -8,19 +8,16 @@ const mapsLink = "https://www.google.com/maps/place/Av.+Jaime+Torres,+138+-+Jard
 
 export function Location() {
   return (
-    <section id="localizacao" className="py-24 relative">
-      {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/30 to-background" />
-      
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12 animate-in fade-in slide-in-from-bottom-4 duration-500">
-            <h2 className="text-3xl md:text-4xl font-serif font-bold mb-4">
+    <section id="localizacao" className="py-12 md:py-16 bg-secondary/20">
+      <div className="container mx-auto px-4">
+        <div className="max-w-3xl mx-auto">
+          <div className="text-center mb-6">
+            <h2 className="text-2xl md:text-3xl font-serif font-bold mb-2">
               Venha nos <span className="text-primary">visitar</span>
             </h2>
             
-            <div className="flex items-center justify-center gap-2 text-muted-foreground">
-              <MapPin className="w-5 h-5 text-primary" />
+            <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
+              <MapPin className="w-4 h-4 text-primary" />
               <address className="not-italic">
                 Av. Jaime Torres, 138 - Jardim Popular, São Paulo - SP
               </address>
@@ -28,7 +25,7 @@ export function Location() {
           </div>
           
           {/* Map */}
-          <div className="rounded-2xl overflow-hidden border border-border shadow-xl animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200">
+          <div className="rounded-xl overflow-hidden border border-border">
             <div className="aspect-video w-full">
               <iframe
                 src={mapEmbedUrl}
@@ -45,14 +42,13 @@ export function Location() {
           </div>
           
           {/* CTA Button */}
-          <div className="text-center mt-8 animate-in fade-in slide-in-from-bottom-4 duration-500 delay-400">
+          <div className="text-center mt-4">
             <Button
               asChild
-              size="lg"
               className="bg-primary hover:bg-primary/90 text-primary-foreground"
             >
               <a href={mapsLink} target="_blank" rel="noopener noreferrer">
-                <Navigation className="w-5 h-5 mr-2" />
+                <Navigation className="w-4 h-4 mr-2" />
                 Como chegar
               </a>
             </Button>

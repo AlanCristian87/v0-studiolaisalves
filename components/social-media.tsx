@@ -20,35 +20,34 @@ const socialLinks = [
 
 export function SocialMedia() {
   return (
-    <section className="py-24 relative">
+    <section className="py-10 md:py-12">
       <div className="container mx-auto px-4">
-        <div className="max-w-2xl mx-auto text-center space-y-8 animate-in fade-in slide-in-from-bottom-8 duration-700">
-          <h2 className="text-3xl md:text-4xl font-serif font-bold">
+        <div className="max-w-xl mx-auto text-center space-y-4">
+          <h2 className="text-2xl md:text-3xl font-serif font-bold">
             Acompanhe nossas{" "}
             <span className="text-primary">redes sociais</span>
           </h2>
           
-          <p className="text-lg text-muted-foreground">
+          <p className="text-sm text-muted-foreground">
             Veja transformações, dicas e novidades do salão.
           </p>
           
-          <div className="flex justify-center gap-4 flex-wrap">
+          <div className="flex justify-center gap-3 flex-wrap pt-2">
             {socialLinks.map((social) => (
               <Button
                 key={social.name}
                 asChild
-                size="lg"
                 variant="outline"
-                className={`border-border bg-card hover:border-transparent hover:text-white transition-all duration-300 px-8 py-6 ${social.color}`}
+                className={`border-border bg-card hover:border-transparent hover:text-white transition-all duration-300 ${social.color}`}
               >
                 <a
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3"
+                  className="flex items-center gap-2"
                 >
-                  <social.icon className="w-6 h-6" />
-                  <span className="text-lg">{social.name}</span>
+                  <social.icon className="w-5 h-5" />
+                  <span>{social.name}</span>
                 </a>
               </Button>
             ))}
