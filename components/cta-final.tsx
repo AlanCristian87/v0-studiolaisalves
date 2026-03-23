@@ -25,7 +25,7 @@ export function CtaFinal() {
             <Button
               asChild
               size="lg"
-              className="text-black"
+              className="text-black transition-all duration-300 hover:brightness-110 hover:scale-[1.02]"
               style={{ backgroundColor: '#D4A574' }}
             >
               <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
@@ -37,8 +37,8 @@ export function CtaFinal() {
               asChild
               size="lg"
               variant="outline"
-              className="hover:text-black"
-              style={{ borderColor: '#D4A574', color: '#D4A574' }}
+              className="transition-all duration-300 hover:brightness-110 hover:scale-[1.02]"
+              style={{ borderColor: '#D4A574', color: '#D4A574', backgroundColor: 'transparent' }}
             >
               <a href={grupoVipLink} target="_blank" rel="noopener noreferrer">
                 <Crown className="w-5 h-5 mr-2" />
