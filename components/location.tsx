@@ -45,7 +45,7 @@ export function Location() {
           <div className="text-center mt-3">
             <Button
               asChild
-              className="text-black"
+              className="text-black transition-all duration-300 hover:brightness-110 hover:scale-[1.02]"
               style={{ backgroundColor: '#D4A574' }}
             >
               <a href={mapsLink} target="_blank" rel="noopener noreferrer">

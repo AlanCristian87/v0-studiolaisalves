@@ -12,7 +12,7 @@ export function Hero() {
   return (
     <section
       id="inicio"
-      className="relative min-h-[85vh] flex items-center justify-center pt-16"
+      className="relative min-h-[85vh] flex items-center justify-center pt-20 md:pt-28"
     >
       {/* Background image with overlay */}
       <div className="absolute inset-0">
@@ -46,8 +46,8 @@ export function Hero() {
             <Button
               asChild
               size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground"
-              style={{ backgroundColor: '#D4A574', color: '#000000' }}
+              className="text-black transition-all duration-300 hover:brightness-110 hover:scale-[1.02]"
+              style={{ backgroundColor: '#D4A574' }}
             >
               <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
                 <MessageCircle className="w-5 h-5 mr-2" />
@@ -58,8 +58,14 @@ export function Hero() {
               asChild
               size="lg"
               variant="outline"
-              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-              style={{ borderColor: '#D4A574', color: '#D4A574' }}
+              className="transition-all duration-300 hover:brightness-110 hover:scale-[1.02]"
+              style={{ borderColor: '#D4A574', color: '#D4A574', backgroundColor: 'transparent' }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = 'rgba(212, 165, 116, 0.15)'
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = 'transparent'
+              }}
             >
               <a href={grupoVipLink} target="_blank" rel="noopener noreferrer">
                 <Crown className="w-5 h-5 mr-2" />

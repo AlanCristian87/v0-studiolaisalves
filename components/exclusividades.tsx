@@ -52,8 +52,8 @@ export function Exclusividades() {
                 <Button
                   asChild
                   size="default"
-                  className="bg-primary hover:bg-primary/90 text-primary-foreground w-full sm:w-auto"
-                  style={{ backgroundColor: '#D4A574', color: '#000000' }}
+                  className="text-black w-full sm:w-auto transition-all duration-300 hover:brightness-110 hover:scale-[1.02]"
+                  style={{ backgroundColor: '#D4A574' }}
                 >
                   <a href={whatsappTerapiaLink} target="_blank" rel="noopener noreferrer">
                     <MessageCircle className="w-4 h-4 mr-2" />

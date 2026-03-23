@@ -67,7 +67,8 @@ export function Header() {
             <Button
               asChild
               size="sm"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground"
+              className="text-black transition-all duration-300 hover:brightness-110 hover:scale-[1.02]"
+              style={{ backgroundColor: '#D4A574' }}
             >
               <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
                 <MessageCircle className="w-4 h-4 mr-1.5" />
@@ -78,7 +79,8 @@ export function Header() {
               asChild
               size="sm"
               variant="outline"
-              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+              className="transition-all duration-300 hover:brightness-110 hover:scale-[1.02]"
+              style={{ borderColor: '#D4A574', color: '#D4A574', backgroundColor: 'transparent' }}
             >
               <a href={grupoVipLink} target="_blank" rel="noopener noreferrer">
                 <Crown className="w-4 h-4 mr-1.5" />
@@ -124,7 +126,8 @@ export function Header() {
                 <div className="flex flex-col gap-2 mt-4">
                   <Button
                     asChild
-                    className="bg-primary hover:bg-primary/90 text-primary-foreground w-full"
+                    className="text-black w-full transition-all duration-300 active:scale-[0.98]"
+                    style={{ backgroundColor: '#D4A574' }}
                   >
                     <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
                       <MessageCircle className="w-4 h-4 mr-2" />
@@ -134,7 +137,8 @@ export function Header() {
                   <Button
                     asChild
                     variant="outline"
-                    className="border-primary text-primary hover:bg-primary hover:text-primary-foreground w-full"
+                    className="w-full transition-all duration-300 active:scale-[0.98]"
+                    style={{ borderColor: '#D4A574', color: '#D4A574', backgroundColor: 'transparent' }}
                   >
                     <a href={grupoVipLink} target="_blank" rel="noopener noreferrer">
                       <Crown className="w-4 h-4 mr-2" />
