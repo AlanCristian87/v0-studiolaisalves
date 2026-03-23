@@ -20,25 +20,25 @@ const socialLinks = [
 
 export function SocialMedia() {
   return (
-    <section className="py-10 md:py-12">
+    <section className="py-8 md:py-10">
       <div className="container mx-auto px-4">
-        <div className="max-w-xl mx-auto text-center space-y-4">
-          <h2 className="text-2xl md:text-3xl font-serif font-bold">
+        <div className="max-w-xl mx-auto text-center space-y-3">
+          <h2 className="text-xl md:text-2xl font-serif font-bold text-white">
             Acompanhe nossas{" "}
-            <span className="text-primary">redes sociais</span>
+            <span style={{ color: '#D4A574' }}>redes sociais</span>
           </h2>
           
-          <p className="text-sm text-muted-foreground">
+          <p className="text-sm text-gray-400">
             Veja transformações, dicas e novidades do salão.
           </p>
           
-          <div className="flex justify-center gap-3 flex-wrap pt-2">
+          <div className="flex justify-center gap-3 flex-wrap pt-1">
             {socialLinks.map((social) => (
               <Button
                 key={social.name}
                 asChild
                 variant="outline"
-                className={`border-border bg-card hover:border-transparent hover:text-white transition-all duration-300 ${social.color}`}
+                className={`border-[#2a2a2a] bg-[#0a0a0a] hover:border-transparent hover:text-white transition-all duration-300 ${social.color}`}
               >
                 <a
                   href={social.href}

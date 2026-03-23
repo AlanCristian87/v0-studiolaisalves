@@ -88,3 +88,72 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Smooth scrolling for all browsers */
+html {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Gold shimmer animation */
+@keyframes goldShimmer {
+  0%, 100% {
+    opacity: 0.7;
+    filter: brightness(1);
+  }
+  50% {
+    opacity: 1;
+    filter: brightness(1.3);
+  }
+}
+
+.animate-gold-shimmer {
+  animation: goldShimmer 2.5s ease-in-out infinite;
+}
+
+/* Gold glow effect */
+@keyframes goldGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 2px #D4A574) drop-shadow(0 0 4px #D4A574);
+  }
+  50% {
+    filter: drop-shadow(0 0 4px #D4A574) drop-shadow(0 0 8px #D4A574) drop-shadow(0 0 12px #D4A574);
+  }
+}
+
+.animate-gold-glow {
+  animation: goldGlow 2s ease-in-out infinite;
+}
+
+/* Gradient border animation */
+@keyframes gradientRotate {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient-border {
+  background: linear-gradient(90deg, #90EE90, #87CEEB, #98FB98, #ADD8E6, #90EE90);
+  background-size: 300% 300%;
+  animation: gradientRotate 4s ease infinite;
+}
+
+/* Compatibility for older browsers */
+@supports not (backdrop-filter: blur(10px)) {
+  .backdrop-blur-md {
+    background-color: rgba(0, 0, 0, 0.95);
+  }
+}
+
+/* Ensure color consistency */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  :root {
+    color-scheme: dark;
+  }
+}

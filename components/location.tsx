@@ -8,16 +8,16 @@ const mapsLink = "https://www.google.com/maps/place/Av.+Jaime+Torres,+138+-+Jard
 
 export function Location() {
   return (
-    <section id="localizacao" className="py-12 md:py-16 bg-secondary/20">
+    <section id="localizacao" className="py-10 md:py-12" style={{ backgroundColor: 'rgba(26, 26, 26, 0.3)' }}>
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto">
-          <div className="text-center mb-6">
-            <h2 className="text-2xl md:text-3xl font-serif font-bold mb-2">
-              Venha nos <span className="text-primary">visitar</span>
+          <div className="text-center mb-4">
+            <h2 className="text-xl md:text-2xl font-serif font-bold mb-1.5 text-white">
+              Venha nos <span style={{ color: '#D4A574' }}>visitar</span>
             </h2>
             
-            <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
-              <MapPin className="w-4 h-4 text-primary" />
+            <div className="flex items-center justify-center gap-2 text-sm text-gray-400">
+              <MapPin className="w-4 h-4" style={{ color: '#D4A574' }} />
               <address className="not-italic">
                 Av. Jaime Torres, 138 - Jardim Popular, São Paulo - SP
               </address>
@@ -25,7 +25,7 @@ export function Location() {
           </div>
           
           {/* Map */}
-          <div className="rounded-xl overflow-hidden border border-border">
+          <div className="rounded-xl overflow-hidden border border-[#2a2a2a]">
             <div className="aspect-video w-full">
               <iframe
                 src={mapEmbedUrl}
@@ -42,10 +42,11 @@ export function Location() {
           </div>
           
           {/* CTA Button */}
-          <div className="text-center mt-4">
+          <div className="text-center mt-3">
             <Button
               asChild
-              className="bg-primary hover:bg-primary/90 text-primary-foreground"
+              className="text-black"
+              style={{ backgroundColor: '#D4A574' }}
             >
               <a href={mapsLink} target="_blank" rel="noopener noreferrer">
                 <Navigation className="w-4 h-4 mr-2" />

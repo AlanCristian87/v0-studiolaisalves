@@ -26,21 +26,21 @@ const socialLinks = [
 
 export function Footer() {
   return (
-    <footer className="bg-card border-t border-border py-8">
+    <footer className="border-t py-6" style={{ backgroundColor: '#0a0a0a', borderColor: '#2a2a2a' }}>
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-3 gap-6 items-start">
+        <div className="grid md:grid-cols-3 gap-5 items-start">
           {/* Logo and info */}
-          <div className="space-y-3">
+          <div className="space-y-2">
             <Image
               src="/images/logo-horizontal-lais-alves.png"
               alt="Laís Alves Studio e Beleza"
-              width={150}
-              height={50}
-              className="h-10 w-auto"
+              width={140}
+              height={45}
+              className="h-9 w-auto"
             />
-            <p className="text-primary text-sm font-medium">Especialista em Cabelos</p>
-            <div className="flex items-start gap-2 text-xs text-muted-foreground">
-              <MapPin className="w-3 h-3 mt-0.5 text-primary flex-shrink-0" />
+            <p className="text-sm font-medium" style={{ color: '#D4A574' }}>Especialista em Cabelos</p>
+            <div className="flex items-start gap-2 text-xs text-gray-400">
+              <MapPin className="w-3 h-3 mt-0.5 flex-shrink-0" style={{ color: '#D4A574' }} />
               <address className="not-italic">
                 Av. Jaime Torres, 138 - Jardim Popular, São Paulo - SP
               </address>
@@ -48,14 +48,14 @@ export function Footer() {
           </div>
           
           {/* Quick links */}
-          <div className="space-y-3">
-            <h3 className="font-semibold text-sm text-foreground">Links Rápidos</h3>
-            <nav className="flex flex-col gap-1.5">
+          <div className="space-y-2">
+            <h3 className="font-semibold text-sm text-white">Links Rápidos</h3>
+            <nav className="flex flex-col gap-1">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-muted-foreground hover:text-primary transition-colors text-xs"
+                  className="text-gray-400 hover:text-[#D4A574] transition-colors text-xs"
                 >
                   {link.label}
                 </Link>
@@ -64,8 +64,8 @@ export function Footer() {
           </div>
           
           {/* Social links */}
-          <div className="space-y-3">
-            <h3 className="font-semibold text-sm text-foreground">Redes Sociais</h3>
+          <div className="space-y-2">
+            <h3 className="font-semibold text-sm text-white">Redes Sociais</h3>
             <div className="flex gap-2">
               {socialLinks.map((social) => (
                 <a
@@ -74,7 +74,10 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={social.name}
-                  className="w-8 h-8 rounded-full bg-secondary flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
+                  className="w-8 h-8 rounded-full flex items-center justify-center text-gray-400 hover:text-black transition-colors"
+                  style={{ backgroundColor: '#1a1a1a' }}
+                  onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#D4A574'}
+                  onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#1a1a1a'}
                 >
                   <social.icon className="w-4 h-4" />
                 </a>
@@ -84,8 +87,8 @@ export function Footer() {
         </div>
         
         {/* Copyright */}
-        <div className="mt-6 pt-4 border-t border-border text-center">
-          <p className="text-xs text-muted-foreground">
+        <div className="mt-5 pt-3 border-t text-center" style={{ borderColor: '#2a2a2a' }}>
+          <p className="text-xs text-gray-500">
             © 2026 Laís Alves Studio e Beleza. Todos os direitos reservados.
           </p>
         </div>

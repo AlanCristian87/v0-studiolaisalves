@@ -8,24 +8,25 @@ const grupoVipLink = "https://chat.whatsapp.com/HWT0IbtObLVHnnRb3F8Ygw"
 
 export function CtaFinal() {
   return (
-    <section className="py-12 md:py-16 bg-gradient-to-b from-transparent via-primary/5 to-transparent">
+    <section className="py-10 md:py-12" style={{ background: 'linear-gradient(to bottom, transparent, rgba(212, 165, 116, 0.05), transparent)' }}>
       <div className="container mx-auto px-4">
-        <div className="max-w-2xl mx-auto text-center space-y-4">
-          <h2 className="text-2xl md:text-3xl font-serif font-bold">
+        <div className="max-w-2xl mx-auto text-center space-y-3">
+          <h2 className="text-xl md:text-2xl font-serif font-bold text-white">
             Agende seu{" "}
-            <span className="text-primary">atendimento</span>{" "}
+            <span style={{ color: '#D4A574' }}>atendimento</span>{" "}
             agora
           </h2>
           
-          <p className="text-sm text-muted-foreground">
+          <p className="text-sm text-gray-400">
             Transforme seus cabelos com cuidado profissional. Entre em contato e agende sua visita.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-3 justify-center pt-2">
+          <div className="flex flex-col sm:flex-row gap-3 justify-center pt-1">
             <Button
               asChild
               size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground"
+              className="text-black"
+              style={{ backgroundColor: '#D4A574' }}
             >
               <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
                 <MessageCircle className="w-5 h-5 mr-2" />
@@ -36,7 +37,8 @@ export function CtaFinal() {
               asChild
               size="lg"
               variant="outline"
-              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+              className="hover:text-black"
+              style={{ borderColor: '#D4A574', color: '#D4A574' }}
             >
               <a href={grupoVipLink} target="_blank" rel="noopener noreferrer">
                 <Crown className="w-5 h-5 mr-2" />
